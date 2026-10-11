@@ -1,0 +1,25 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="using:Avalonia_DB_Connection"
+             mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="768"
+             Width="1024" Height="768" HorizontalAlignment="Left" VerticalAlignment="Top"
+             Background="Black" Foreground="White"
+             x:Class="Avalonia_DB_Connection.Sales">
+
+    <Grid Margin="20" RowSpacing="10" RowDefinitions="Auto,*">
+        <TextBlock Grid.Row="0" Text="SALES" FontSize="24"/>
+        
+
+        <TableView Name="MyTable" Grid.Row="1" x:DataType="local:Sale" Margin="0,30,0,0">
+            <TableView.Columns> 
+                <TableViewColumn Header=""             Width="30" Binding="{Binding id}"/>
+                <TableViewColumn Header="Product Name"     Width="1*" Binding="{Binding productname}"/>
+                <TableViewColumn Header="Total Sales"      Width="1*" Binding="{Binding totalsales}"/>
+                
+            </TableView.Columns>
+            
+        </TableView>
+    </Grid>
+</UserControl>
